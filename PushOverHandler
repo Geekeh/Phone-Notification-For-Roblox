@@ -16,7 +16,8 @@ function PushOverModule:SendMessage(message: string)
 	local data = {
 		user = self.UserKey,
 		token = self.ApiToken,
-		message = message
+		message = message,
+		sound = "cashregister"
 	}
 	local Url = "https://api.pushover.net/1/messages.json"
 	local encodeData = HttpService:JSONEncode(data)
